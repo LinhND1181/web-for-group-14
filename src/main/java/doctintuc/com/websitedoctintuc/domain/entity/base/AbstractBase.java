@@ -19,19 +19,25 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 public abstract class AbstractBase implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	public Integer id;
 
-    @CreationTimestamp
-    @Column(name = "create_date")
-    public Timestamp createDate;
+	@Column(name = "active_flag")
+	private Boolean activeFlag = Boolean.TRUE;
+
+	@Column(name = "delete_flag")
+	private Boolean deleteFlag = Boolean.FALSE;
+
+	@CreationTimestamp
+	@Column(name = "create_date")
+	public Timestamp createDate;
 
 //    public AbstractBase createBy;
 
-    @UpdateTimestamp
-    @Column(name = "last_modified_date")
-    public Timestamp updateDate;
+	@UpdateTimestamp
+	@Column(name = "last_modified_date")
+	public Timestamp updateDate;
 
 }

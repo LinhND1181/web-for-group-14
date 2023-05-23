@@ -17,9 +17,18 @@ import java.util.List;
 @Entity
 public class Category extends AbstractBase {
 
-    @Column(name = "category_name")
-    private String categoryName;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-    @OneToMany(mappedBy = "category" , fetch = FetchType.EAGER , cascade = CascadeType.ALL)
-    private List<Type> types;
+	@Column(name = "category_name")
+	private String categoryName;
+
+	@OneToMany(mappedBy = "category", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	private List<Type> types;
+
+	public Category(String categoryName) {
+		this.categoryName = categoryName;
+	}
 }

@@ -17,11 +17,6 @@ import java.util.List;
 @Entity
 public class Category extends AbstractBase {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	@Column(name = "category_name")
 	private String categoryName;
 

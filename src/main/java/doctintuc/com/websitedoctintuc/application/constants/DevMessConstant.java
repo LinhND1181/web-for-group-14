@@ -31,6 +31,7 @@ public class DevMessConstant {
 		public static final String ACCOUNT_IS_NOT_ENABLE = "This account is not enable";
 		public static final String NOT_FOUND_CONFIRM_TOKEN = "Not found ConfirmationToken by token";
 		public static final String DUPLICATE_NAME = "Duplicate name = %s";
+		public static final String DUPLICATE_TITLE = "Duplicate title = %s";
 		public static final String EXITS_NAME = "This name : %s is exits";
 		public static final String EXITS_PHONE = "This phone : %s is exits";
 		public static final String EXITS_USERNAME = "This username : %s is exits";
@@ -44,6 +45,7 @@ public class DevMessConstant {
 		public static final String UPLOAD_DATA_FROM_EXCEL_FILE_FAILED = "Upload data from excel file failed!";
 		public static final String NOTIFICATION_DELETE_FAILED = "Remove object by id is failed!";
 		public static final String NOTIFICATION_DELETE_SUCCESS = "Remove object by id is success!";
+		public static final String UNACTIVE_ID = "This id is unactive";
 
 		private Common() {
 		}

@@ -27,7 +27,7 @@ public class CategoryController {
 
 	@GetMapping(UrlConstant.Category.DATA_CATEGORY)
 	@ApiOperation(value = "Get all category")
-	public ResponseEntity<?> getFindAllBrand(@RequestParam(name = "page", required = false) Integer page) {
+	public ResponseEntity<?> getFindAllCategory(@RequestParam(name = "page", required = false) Integer page) {
 		return VsResponseUtil.ok(iCategoryService.listCategory(page, CommonConstant.SIZE_OFF_PAGE));
 	}
 

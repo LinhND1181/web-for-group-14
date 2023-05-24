@@ -9,6 +9,8 @@ import lombok.Setter;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,30 +19,29 @@ import java.util.List;
 @Entity
 public class News extends AbstractBase {
 
-    @Column(name = "news_name")
-    private String newsName;
+	@Column(name = "news_name")
+	private String newsName;
 
-    @Column(name = "title")
-    private String title;
+	@Column(name = "title")
+	private String title;
 
-    @Column(name = "content")
-    private String content;
+	@Column(name = "content")
+	private String content;
 
-    @Column(name = "tags")
-    private String tags;
+	@Column(name = "tags")
+	private String tags;
 
-    @Column(name = "video")
-    private String video;
+	@Column(name = "video")
+	private String video;
 
-    @Column(name = "podcast")
-    private String podcast;
+	@Column(name = "podcast")
+	private String podcast;
 
-    @OneToMany(mappedBy = "news", fetch = FetchType.EAGER,
-            cascade = {CascadeType.REMOVE,
-            CascadeType.PERSIST})
-    private List<Comment> comments;
+	@OneToMany(mappedBy = "news", fetch = FetchType.EAGER, cascade = { CascadeType.REMOVE, CascadeType.PERSIST })
+	private List<Comment> comments;
 
-    @ManyToOne
-    @JoinColumn(name = "type_id" , referencedColumnName = "id")
-    private Type type;
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name = "type_id", referencedColumnName = "id")
+	private Type type;
 }

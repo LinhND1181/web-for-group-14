@@ -58,10 +58,7 @@
 			<artifactId>mapstruct-processor</artifactId>
 			<version>1.4.2.Final</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		
 		<!--       Using thymeleaf -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -78,11 +75,6 @@
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 		<!-- for working with exel-->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -104,10 +96,6 @@
 			<version>5.2.0</version>
 		</dependency>
 		<!-- For Maven -->
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>

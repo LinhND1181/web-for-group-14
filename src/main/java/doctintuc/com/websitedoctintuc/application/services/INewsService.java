@@ -6,9 +6,15 @@ import doctintuc.com.websitedoctintuc.domain.dto.NewsDTO;
 import doctintuc.com.websitedoctintuc.domain.entity.News;
 
 public interface INewsService {
-	
+
 	List<News> findAllNews(Integer page, Integer size);
-	
+
 	News createNewNews(NewsDTO newsDTO);
-	
+
+	News updateNewsById(NewsDTO NewsDTO, Integer id);
+
+	News getNewsById(Integer id);
+
+	String deleteNewsById(Integer id);
+
 }
